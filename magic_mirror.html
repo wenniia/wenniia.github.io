@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title> Annie Wang </title>
+        
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+                color:white;
+            }
+
+            /* === Navigation Bar === */
+            .top-nav {
+                background-color: #1a1a1a;
+                padding: 15px 40px;
+                text-align: right;
+            }
+
+            .top-nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: opacity 0.2s;
+            }
+
+            .top nav a:hover {
+                opacity: 0.7;
+            }
+
+            .project-content {
+                max-width:900px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            .project-banner {
+                height: 33vh;
+                background-image: url('assets/mirror.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-color: #222; /* Dark fallback color */
+                display: flex;
+                align-items: center;
+            }
+
+
+            .project-banner h1 {
+                font-size: 2.8em;
+                color: white;
+                margin: 0;
+                padding-left: 5%;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+                text-transform: uppercase;
+            }
+
+            .project-details p {
+                font-size: 1em;
+                line-height: 1.7;
+            }
+
+            /* --- Navigation Link --- */
+            .nav-footer {
+                padding: 20px 5%; /* Use percentages for responsive padding */
+            }
+
+            .back-link {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+            }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+            
+        </style>
+        
+    </head>
+
+    
+    <body>
+        <header>
+            
+            <div class = "top-nav">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </body>
+    
+    <div class="project-banner">
+        <h1>Magic Mirror</h1>
+    </div>
+
+    <main class = "project-content">
+        <div class="project-details">
+            <p>
+                The Magic Mirror is a mirror that displays and self-updates 
+                with widgets of information. Taken from my to-do list, weather, 
+                and calendar, the concept originates from being able to get up and 
+                ready while seeing a day’s information at a glance, consolidated all 
+                onto one screen. 
+            </p>
+            <p>
+                In order to display the monitor, a one-way mirror was utilized so the 
+                user could see their own appearance while seeing the monitor’s 
+                information. The monitor’s brightness was intricately modified so the 
+                display could not be seen. An external API was implemented so it 
+                could pull information from the weather app, calendar, and to-do list.
+                The wooden frame was cut to custom-fit around the monitor. 
+                Additionally, it was painted black to blend in with the monitor. 
+                Grooves were made in the wood to hold the LED strip. The LED strip’s
+                customizable nature allows various “moods” of color to be displayed,
+                from monochromatic hues to patterns dancing across the mirror.
+            </p>
+            <p>
+                As technology becomes increasingly advanced, this project incorporates 
+                the idea of how it is able to automate and make parts of our lives
+                 more efficient. However, this did require a lot of access to my 
+                 personal information, such as my location, what I need to do, 
+                 and even how I spend my time. Ultimately, this project begs the 
+                 question of where we should draw the line of integrating technology
+                  and how we should use it. 
+
+            </p>
+        </div>
+    </main>
+    <footer class = "nav-footer">
+            <a href ="../index.html" class="back-link">← Back to Portfolio</a>
+    </footer>
+</html>

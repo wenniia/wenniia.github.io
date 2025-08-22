@@ -1,27 +1,203 @@
 <html>
-  <head>
-    <title>Annie Wang</title> 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-    <style> 
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-  </head>
-  <body>
-    <main>
-      <img src = "this me.png" width="50%"></img>
-        <p>
-          <strong> Annie Wang</strong> is an incoming second-year studying electrical engineering at UCSB. Doubling as a self-taught
-          digital artist, she enjoys using this illustrative medium as a means of expressing her interests and emotions. With a profound interest 
-          in expressing art reflecting the intricacies of light, she examines how properties of light distort and carve form, altering and 
-          complicating how people understand and verify their perceptions of the real world.
-        </p>
-        <p><a href="portfolio">portfolio</a></p>
+    <head>
+        <title> Annie Wang </title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+            }
+
+            /* === Navigation Bar === */
+            .top-nav {
+                background-color: #1a1a1a;
+                padding: 15px 40px;
+                text-align: right;
+            }
+
+            .top-nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: opacity 0.2s;
+            }
+
+            .top nav a:hover {
+                opacity: 0.7;
+            }
+
+            /* === Biography Section === */
+            .bio-header {
+                background-color: rgb(100, 80, 144);
+                color:white;
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+
+            .bio-header p {
+                max-width: 700px;
+                margin: 0 auto 20px auto;
+                line-height: 1.3;
+                opacity: 0.9;
+            }
+
+            .bio-header nav a {
+                color:white ;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: opacity 0.2s; /* smooth hover effect */
+            }
+
+            .bio-header nav a:hover {
+                opacity: 0.7;
+            }
+
+            /* --- Uniform Grid Gallery --- */
+            .gallery-container {
+                padding: 40px;
+            }
+        
+            .image-grid {
+                /* 1. Change layout to CSS Grid */
+                display: grid;
+                /* 2. Create responsive columns. 'auto-fill' creates as many columns as will fit. */
+                /* 'minmax(250px, 1fr)' means columns can be a minimum of 250px and a max of 1 fraction of the space. */
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                /* 3. Set the gap between all grid items */
+                gap: 0px;
+            }
+
+            .grid-item {
+                /* 4. Force the item to be a perfect square */
+                position:relative;
+                aspect-ratio: 1 / 1;
+                /* 5. Set the image to cover the square without stretching */
+                background-size: cover;
+                /* 6. Center the image within the square */
+                background-position: center;
+            
+                /* subtle transition for a hover effect */
+                transition: transform 0.3s ease;
+                overflow:hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 4px;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+
+                /* semi-transparent background*/
+                background-color: rgba(150, 107, 207, 0.3);
+                color: white;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                opacity: 0;
+
+                transition: opacity 0.3s ease;
+            }
+
+            .grid-item:hover .overlay {
+                /* show item on trigger */
+                opacity: 1;
+            }
+
+            .overlay h3 {
+                margin: 0;
+                font-size: 1.2em;
+                padding: 20px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            
+            .overlay p {
+                margin: 10px;
+                line-height: 1.3;
+                font-size: 0.9em;
+            }
+
+            .grid-item:hover {
+                transform: scale(1.03); /* Slightly enlarge the image on hover */
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- Navigation Bar -->
+            <div class = "top-nav">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+            <!-- Biography Header -->
+            <div class = "bio-header">
+                <p>
+                    Annie Wang is a self-taught digital artist studying 
+                    electrical engineering at the University of California,
+                    Santa Barbara. With a profound interest in expressing
+                    creations reflecting the intracacies of light, she 
+                    examines how the properties of light distort and carve form,
+                    altering how people understand and verify their perceptions 
+                    of the real world.
+                </p>
+            </div>
+    </header>
+    </body>
+    
+
+    <main class="gallery-container">
+        <div class="image-grid">
+            <a href = "lightspeed.html" class="grid-link">
+                <div class="grid-item" style="background-image: url('assets/lightspeed.jpg');">
+                    <div class="overlay">
+                        <h3>Lightspeed</h3>
+                        <p>
+                            is a high-speed reaction game where the player must
+                            hit eight illuminated buttons as fast as possible within
+                            the alloted time frame. This Batak-inspired rendition 
+                            capitalizes on the original board's interactive nature and
+                            friendly competition while boosting ease of portability and 
+                            vivid colors.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <a href = "magic_mirror.html" class = "grid-link">
+                <div class="grid-item" style="background-image: url('assets/mirror.jpeg');">
+                    <div class="overlay">
+                        <h3>Magic Mirror</h3>
+                        <p>
+                            is a mirror that displays and self-updates with pockets of
+                            information. Taken from the user, relevant information such as 
+                            daily tasks, events, and weather is able to be consolidated all
+                            onto one screen. Its concept originates from the ability to start 
+                            the day off able to process a day's responsibilities at a glance.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </main>
-    <script src="moon-sketch.js"></script>
-    <footer>©2025 Annie Wang</footer>
-  </body>
+
+    <footer>
+        <p style="color:white">©2025 Annie Wang</p>
+    </footer>
 </html>
