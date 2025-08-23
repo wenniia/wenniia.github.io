@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <title> Annie Wang </title>
+        
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+                color:white;
+            }
+
+            /* === Navigation Bar === */
+            .top-nav {
+                background-color: #1a1a1a;
+                padding: 15px 40px;
+                text-align: right;
+            }
+
+            .top-nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9em;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: opacity 0.2s;
+            }
+
+            .top nav a:hover {
+                opacity: 0.7;
+            }
+
+            .project-content {
+                max-width:900px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            .project-banner {
+                height: 33vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .background-iframe {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                width: 125%;
+                height: 125%;
+
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .project-banner h1 {
+                font-size: 2.8em;
+                color: white;
+                margin: 0;
+                padding-left: 5%;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+                text-transform: uppercase;
+            }
+
+            .project-details p {
+                font-size: 1.1em;
+                line-height: 1.7;
+            }
+
+            /* --- Navigation Link --- */
+            .nav-footer {
+                padding: 20px 5%; /* Use percentages for responsive padding */
+            }
+
+            .back-link {
+                font-size: 1.2em;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+            }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+            
+        </style>
+        
+    </head>
+
+    
+    <body>
+        <header>
+            
+            <div class = "top-nav">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </body>
+    <!--qA296xUAB7o-->
+    <div class="project-banner">
+        <iframe
+        class="background-iframe"
+        src="https://www.youtube.com/embed/qA296xUAB7o?autoplay=1&mute=1&loop=1&playlist=qA296xUAB7o&controls=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        >
+        </iframe>
+
+        </iframe>
+        <h1>Lightspeed</h1>
+    </div>
+
+    <main class = "project-content">
+        <div class="project-details">
+            <p>
+                Inspired by Batak, Lightspeed is a high-speed reaction game where 
+                the player must hit illuminated buttons as fast as possible. Batak 
+                usually features a full-body board with eight buttons to hit. This 
+                board’s utility has a diverse audience–from athletes in Formula 1 
+                and football training their reaction time to finding its use within 
+                parties and exhibitions. Our rendition capitalizes on the original 
+                board’s physical interactive nature and friendly competition while 
+                making the board smaller, portable, and with a lot more color.
+            </p>
+
+            <p>
+                Lightspeed includes numerous parts and elements of engineering. 
+                We decided to design our own hexagonal buttons as we wanted the 
+                buttons’ colors to be completely changeable to our preference. Thus, 
+                we designed and 3D-printed the buttons to each hold an individually- 
+                addressable LED. Additionally, 3D-print was a viable candidate as we 
+                expected the buttons would go through high stress as the player must 
+                hit the button rapidly. As for the cover, acrylic was the best
+                material on hand to reflect the random colors in a bright yet 
+                slightly muted manner. As for implementing its portability and 
+                accessibility, the board’s edge to edge is within arm’s reach,
+                only requiring arm movement to play.
+            </p>
+
+            <p>
+                This game was created in mind of gathering people around an 
+                enjoyable, interactive game. Ultimately, it creates a shared, 
+                safe space for engagement in a good-natured contest, pivoting 
+                the game as a simple yet powerful tool for social connection.
+
+            </p>
+
+            <h3>Collaborators</h3>
+            <p>
+                Shravya Salem Sathish, UCSB
+            </p>
+            <p>
+                Jamie Shih, UCSB
+            </p>
+        </div>
+    </main>
+    <footer class = "nav-footer">
+            <a href ="../index.html" class="back-link">← Back to Portfolio</a>
+    </footer>
+</html>
