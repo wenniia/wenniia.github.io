@@ -1,7 +1,7 @@
 <html>
     <head>
         <title> Annie Wang </title>
-         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
         
@@ -17,11 +17,15 @@
                 background-color: #1a1a1a;
                 padding: 15px 40px;
                 text-align: right;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
 
             .top-nav a {
                 color: white;
-                margin: 0 15px;
+                margin: 20px;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 0.9em;
@@ -32,6 +36,13 @@
 
             .top nav a:hover {
                 opacity: 0.7;
+            }
+
+            .my-name a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.2em;
+                font-weight: bold;
             }
 
             /* === Biography Section === */
@@ -155,15 +166,18 @@
         <header>
             <!-- Navigation Bar -->
             <div class = "top-nav">
+                <div class="my-name">
+                    <a href="index.html">Annie Wang</a>
+                </div>
+
                 <nav>
                     <a href="index.html">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="#">Gallery</a>
                 </nav>
             </div>
             <!-- Biography Header -->
             <div class = "bio-header">
-                <img src = "this me.png" alt="pfp" class="profile-picture">
+                <img src = "#" alt="pfp" class="profile-picture">
                 <p>
                     Annie Wang is a self-taught digital artist studying 
                     electrical engineering at the University of California,
@@ -207,6 +221,32 @@
                             daily tasks, events, and weather is able to be consolidated all
                             onto one screen. Its concept originates from the ability to start 
                             the day off able to process a day's responsibilities at a glance.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+             <a href = "pong.html" class = "grid-link">
+                <div class="grid-item" style="background-image: url('assets/pong.jpeg');">
+                    <div class="overlay">
+                        <h3>Arduino Pong Game</h3>
+                        <p>
+                            is a rendition of the classic 1972 arcade game. Displayed on the 
+                            colorful SSD1331, this miniature game features both single and 
+                            multiplayer modes.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <a href = "aira.html" class = "grid-link">
+                <div class="grid-item" style="background-image: url('assets/aira.png');">
+                    <div class="overlay">
+                        <h3>AIRA</h3>
+                        <p>
+                            is the Artificial Intelligence Raccoon Automaton, an Arduino and LLM-powered 
+                            robot that is able to interact with its audience through sound, specifically 
+                            human speech. 
                         </p>
                     </div>
                 </div>
