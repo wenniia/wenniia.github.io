@@ -1,10 +1,14 @@
 <html>
     <head>
         <title> Annie Wang </title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
+        
         <style>
             body {
                 margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: 'Nunito', sans-serif;
                 background-color: black;
             }
 
@@ -58,6 +62,16 @@
                 opacity: 0.7;
             }
 
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 30px;
+                border: 4px solid white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+
             /* --- Uniform Grid Gallery --- */
             .gallery-container {
                 padding: 40px;
@@ -68,7 +82,8 @@
                 display: grid;
                 /* 2. Create responsive columns. 'auto-fill' creates as many columns as will fit. */
                 /* 'minmax(250px, 1fr)' means columns can be a minimum of 250px and a max of 1 fraction of the space. */
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                align-items: center;
                 /* 3. Set the gap between all grid items */
                 gap: 0px;
             }
@@ -148,6 +163,7 @@
             </div>
             <!-- Biography Header -->
             <div class = "bio-header">
+                <img src = "this me.png" alt="pfp" class="profile-picture">
                 <p>
                     Annie Wang is a self-taught digital artist studying 
                     electrical engineering at the University of California,
@@ -167,7 +183,8 @@
             <a href = "lightspeed.html" class="grid-link">
                 <div class="grid-item" style="background-image: url('assets/lightspeed.jpg');">
                     <div class="overlay">
-                        <h3>Lightspeed</h3>
+                        <h3>Light
+                            speed</h3>
                         <p>
                             is a high-speed reaction game where the player must
                             hit eight illuminated buttons as fast as possible within
@@ -201,30 +218,3 @@
         <p style="color:white">©2025 Annie Wang</p>
     </footer>
 </html>
-
-<!--
-<html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-      
-    </head>
-    <body>
-        <main>
-            <img src="this me.png" width="100%"></img>
-            <p>
-                <strong>Annie Wang</strong> is a self-taught digital artist studying Electrical Engineering at University of California, Santa Barbara.
-                With a profound interest in expressing art reflecting the intricacies of light, she examines how properties of light distort and carve form, 
-                altering and complicating how people understand and verify their perceptions of the real world. 
-            </p>
-            <p><a href="portfolio">portfolio</a></p>
-        </main>
-  
-        <!-- add the line below 
-        <script src="moon-sketch.js"></script>
-  
-        <footer>
-            <p>©2025 Annie Wang </p>
-        </footer>
-    </body>
-</html>
--->
