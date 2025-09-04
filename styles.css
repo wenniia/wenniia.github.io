@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: black;
+}
+
+/* === Navigation Bar === */
+.top-nav {
+    background-color: #1a1a1a;
+    padding: 15px 40px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    margin-left: 25px; /* Adds space only to the left of each nav link */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.top-nav a:hover {
+    opacity: 0.7;
+}
+
+.the-logo {
+    transform: translateY(-9px);
+}
+.the-logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.the-logo img {
+    height: 50px;
+    width: 100px;
+    transform: translateY(9px);
+    margin-right: 10px;
+}
+
+.the-logo span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/* === Biography Section === */
+
+.bio-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+
+}
+
+.bio-text {
+    background-color: rgba(255, 255, 255, 0.1); /* A slight white tint */
+    backdrop-filter: blur(2px); /* This does the blurring */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    padding: 30px;
+    border-radius: 30px;
+}
+#canvas-container {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#canvas-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#canvas-container p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    line-height: 1.3;
+    opacity: 0.9;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 4px solid rgb(239, 211, 161);
+    box-shadow: 0 4px 25px rgba(255, 209, 93, 0.636);
+}
+
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: rgb(239, 211, 161);
+    transform: scale(1.1);
+}
+
+/* --- Uniform Grid Gallery --- */
+.gallery-container {
+    padding: 40px;
+}
+        
+.image-grid {
+    /* 1. Change layout to CSS Grid */
+    display: grid;
+    /* 2. Create responsive columns. 'auto-fill' creates as many columns as will fit. */
+    /* 'minmax(250px, 1fr)' means columns can be a minimum of 250px and a max of 1 fraction of the space. */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-items: center;
+    /* 3. Set the gap between all grid items */
+    gap: 0px;
+}
+
+.grid-item {
+    /* 4. Force the item to be a perfect square */
+    position:relative;
+    aspect-ratio: 1 / 1;
+    /* 5. Set the image to cover the square without stretching */
+    background-size: cover;
+    /* 6. Center the image within the square */
+    background-position: center;
+            
+    /* subtle transition for a hover effect */
+    transition: transform 0.3s ease;
+    overflow:hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    /* semi-transparent background*/
+    background-color: rgba(150, 107, 207, 0.3);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+    /* show item on trigger */
+    opacity: 1;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 1.2em;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+            
+.overlay p {
+    margin: 10px;
+    line-height: 1.3;
+    font-size: 0.9em;
+}
+
+.grid-item:hover {
+    transform: scale(1.03); /* Slightly enlarge the image on hover */
+}
