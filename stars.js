@@ -2,7 +2,7 @@
 let stars = [];
 const numStars = 1200; // How many stars to create
 
-// Physics parameters for the interaction
+// NEW: Physics parameters for the interaction
 const repelRadius = 120; // How close the mouse needs to be to affect stars
 const maxRepelForce = 0.5; // The strongest push force from the mouse
 const returnStrength = 0.01; // How strongly stars are pulled back to their home
