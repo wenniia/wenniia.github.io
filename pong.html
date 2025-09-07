@@ -5,7 +5,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="proj_style.css">
-
+        
     </head>
 
     
@@ -34,54 +34,73 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
         <script src="app.js"></script>
+        
     </body>
-    
+
     <div class="banner">
-        <img src="assets/mirror.jpeg">
+        <img src="assets/pong.jpeg">
         <div class="banner-content">
-            <h1>Magic Mirror</h1>
+            <h1>Pong</h1>
         </div>
     </div>
 
     <main class = "project-content">
         <div class="project-details">
             <p>
-                The Magic Mirror is a mirror that displays and self-updates 
-                with widgets of information. Taken from my to-do list, weather, 
-                and calendar, the concept originates from being able to get up and 
-                ready while seeing a day’s information at a glance, consolidated all 
-                onto one screen. 
+                Inspired by the popular 1972 Pong arcade video game, 
+                this project will be taking inspiration from mechanics of
+                the Pong game with an Arduino-powered twist. The game will 
+                utilize a color OLED display to screen the graphics, illustrating 
+                the scoreboard, paddles, and ball. The game will be shown on a color 
+                OLED display, showing the scoreboard, paddles, and ball. Through the 
+                2-player function, this game will give the option to players of 
+                playing a classic game solo or with other people. Additionally, 
+                players can play the game with color. Whether this game is a first 
+                or not for the player, this timeless classic will be fun alone or 
+                with other people.
             </p>
             <p>
-                In order to display the monitor, a one-way mirror was utilized so the 
-                user could see their own appearance while seeing the monitor’s 
-                information. The monitor’s brightness was intricately modified so the 
-                display could not be seen. An external API was implemented so it 
-                could pull information from the weather app, calendar, and to-do list.
-                The wooden frame was cut to custom-fit around the monitor. 
-                Additionally, it was painted black to blend in with the monitor. 
-                Grooves were made in the wood to hold the LED strip. The LED strip’s
-                customizable nature allows various “moods” of color to be displayed,
-                from monochromatic hues to patterns dancing across the mirror.
+                The video below demonstrates the singleplayer game mode. The player
+                must go against the "CPU" (a wall) and win 5 points to win.
             </p>
-            <img src="assets/mirror_2.png">
+            <div class="vertical-vid-container">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/4q8bJXxFBbk?autoplay=1&mute=1&loop=1&playlist=4q8bJXxFBbk&controls=0&modestbranding=1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <!--4q8bJXxFBbk-->
+            <figcaption>Singleplayer Gameplay</figcaption>
             <p>
-                As technology becomes increasingly advanced, this project incorporates 
-                the idea of how it is able to automate and make parts of our lives
-                 more efficient. However, this did require a lot of access to my 
-                 personal information, such as my location, what I need to do, 
-                 and even how I spend my time. Ultimately, this project begs the 
-                 question of where we should draw the line of integrating technology
-                  and how we should use it. 
-
+                This video below illustrates the multiplayer game mode. The two players
+                each control one joystick, playing against each other in a game best of five
+                points.
             </p>
+            <!--8qZn3K0c77w-->
+            <div class="vertical-vid-container">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/8qZn3K0c77w?autoplay=1&mute=1&loop=1&playlist=8qZn3K0c77w&controls=0&modestbranding=1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <figcaption>Multiplayer Gameplay</figcaption>
         </div>
 
         <div class="nav-back">
             <a href ="../index.html" class="btn">← Back to Portfolio</a>
         </div>
-    </main>
 
+    </main>
     <footer>
         <p>©2025 Annie Wang</p>
     </footer>
