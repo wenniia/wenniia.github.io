@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+p {
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.7;
+    padding-left: 20px; 
+}
+
+/* === Navigation Bar === */
+.top-nav {
+    background-color: #1a1a1a;
+    padding: 15px 40px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    margin-left: 25px; /* Adds space only to the left of each nav link */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.top-nav a:hover {
+    opacity: 0.7;
+}
+
+.the-logo {
+    transform: translateY(-9px);
+}
+
+.the-logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.the-logo img {
+    height: 50px;
+    width: 100px;
+    transform: translateY(9px);
+    margin-right: 10px;
+}
+
+.the-logo span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* --- New Masonry Layout using CSS Columns --- */
+.gallery-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Default to a single column for small screens */
+    columns: 1;
+    gap: 2rem; /* This is the space between columns */
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+    display: inline-block; /* Essential for columns to work correctly */
+    width: 100%;
+    margin-bottom: 2rem; /* This creates the vertical space between items */
+    break-inside: avoid; /* Prevents items from breaking across columns */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    transform: scale(1.05);
+}
+
+/* Gallery Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Item Info Text Styling */
+.item-info {
+    padding: 0 0.5rem;
+}
+
+.item-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+
+/* --- Responsive Adjustments for Columns --- */
+/* For screens wider than 768px, use 2 columns */
+@media (min-width: 768px) {
+    .gallery-container {
+        columns: 2;
+    }
+}
+
+/* For screens wider than 1024px, use 3 columns */
+@media (min-width: 1024px) {
+    .gallery-container {
+        columns: 3;
+    }
+}
+
+/* mobile stuff */
+/* === Hamburger Button Styles === */
+.hamburger-btn {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000; /* Ensures it's on top of other content */
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 50px;
+}
+
+/* === Media Query for Mobile Screens === */
+@media (max-width: 768px) {
+
+    /* This shows the hamburger button (unchanged) */
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* 1. This is the menu in its HIDDEN state (now above the screen) */
+    .top-nav nav {
+        position: fixed;
+        z-index: 999;
+        padding-top: 40px;
+        padding-bottom: 40px; 
+
+        /* CHANGED: Positioned from the top-left */
+        top: 0;
+        left: 0;
+        
+        /* CHANGED: Dimensions are now a full-width bar */
+        width: 100%;
+        height: auto;
+        
+        background-color: #1a1a1aac;
+        
+        /* The KEY CHANGE: Hides the menu above the screen */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        
+        /* Layout for the links inside */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center links horizontally */
+        justify-content: center;
+    }
+
+    /* 2. This is the menu in its VISIBLE state */
+    .top-nav nav.nav-open {
+        /* The KEY CHANGE: Slides the menu down into view */
+        transform: translateY(0);
+    }
+    
+    /* 3. Style the links for the dropdown layout */
+    .top-nav nav a {
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0; /* Add vertical padding */
+    }
+}

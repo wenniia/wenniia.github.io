@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* === Navigation Bar === */
+.top-nav {
+    background-color: #1a1a1a;
+    padding: 15px 40px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    margin-left: 25px; /* Adds space only to the left of each nav link */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.top-nav a:hover {
+    opacity: 0.7;
+}
+
+.the-logo {
+    transform: translateY(-9px);
+}
+.the-logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.the-logo img {
+    height: 50px;
+    width: 100px;
+    transform: translateY(9px);
+    margin-right: 10px;
+}
+
+.the-logo span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.banner {
+    position: relative; /* This is the anchor for the overlay content */
+    width: 100%;
+    height: 80vh; 
+    color: white; /* Default text color for elements inside */
+    overflow: hidden; /* Ensures nothing spills out */
+}
+
+/* 2. The banner image */
+.banner img {
+    position: absolute; /* Takes the image out of the normal document flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the image to cover the container, cropping if needed */
+    z-index: -1; /* Puts the image behind the content */
+}
+
+/* 3. A dark overlay for text readability (Optional but recommended) */
+.banner::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+    z-index: 0; /* Sits between the image and the text content */
+}
+
+/* 4. The container for the text content */
+.banner-content {
+    position: relative; /* Stacks on top of the pseudo-element and image */
+    z-index: 1;
+    height: 100%; /* Fills the entire banner area */
+
+    /* Use Flexbox to perfectly center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical alignment */
+    padding: 20px;
+}
+
+/* 5. Styling for the text itself */
+.banner-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 600px; /* Prevents text from becoming too wide on large screens */
+}
+
+.project-details p {
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.7;
+    padding-left: 20px;
+}
+
+.project-details h3 {
+    padding-left: 20px;
+}
+
+.project-details img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid #ccb0b0;
+}
+
+.vid-container {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+figcaption {
+    padding: 10px 0 0 0; /* Add some space above the caption text */
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+}
+/* --- Navigation Link --- */
+.nav-back {
+    padding: 0.5rem 0rem 0rem 0rem; /* Use percentages for responsive padding */
+    margin-bottom: -1.5rem;
+    text-align: right;
+}
+
+/* Basic Button Styling */
+.btn {
+    display: inline-block; /* Allows us to set padding and other block-level properties */
+    padding: 12px 24px;   /* Vertical and horizontal padding */
+    margin-top: 10px;
+    margin-bottom: 20px;         /* Adds some space around the button */
+    margin-right: 50px;
+    background-color: #eb8686d3; /* A dark gray background */
+    color: white;         /* White text color */
+    text-decoration: none;/* Removes the default underline from the link */
+    border-radius: 5px;   /* Rounds the corners */
+    font-family: sans-serif; /* A clean, modern font */
+    font-weight: bold;
+    border: 2px solid #ccb0b0; /* Adds a subtle border */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+
+}
+
+/* Hover Effect: Styles for when the mouse is over the button */
+.btn:hover {
+    background-color: #da8e8e; /* Slightly lighter background on hover */
+    cursor: pointer;        /* Changes the cursor to a pointer */
+}
+
+/* Active Effect: Styles for when the button is being clicked */
+.btn:active {
+    transform: scale(0.98); /* Makes the button slightly smaller on click */
+}
+
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  pointer-events: none;
+  
+  padding-top: 56.25%; 
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Removes the default border */
+}
+
+/* A container to hold the vertical video */
+.vertical-vid-container {
+    width: 100%; /* Or a fixed width like 300px */
+    max-width: 320px; /* Example max width for a phone-like size */
+    margin: 0 auto;
+    
+    /* 1. Set the vertical aspect ratio */
+    aspect-ratio: 9 / 16;
+    
+    /* 2. Prepare the container for cropping */
+    position: relative;
+    overflow: hidden;
+    
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.vertical-vid-container iframe {
+    /* 3. Position the iframe absolutely inside the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This centers the iframe */
+
+    /* 4. Make the iframe wider to fill the vertical space */
+    width: 178%; /* This is approx. 16/9, making it wide enough */
+    height: 100%;
+    
+    border: none;
+    pointer-events: none; /* Keeps it non-interactive */
+}
+
+/* mobile stuff */
+/* === Hamburger Button Styles === */
+.hamburger-btn {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000; /* Ensures it's on top of other content */
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 50px;
+}
+
+/* === Media Query for Mobile Screens === */
+@media (max-width: 768px) {
+
+    /* This shows the hamburger button (unchanged) */
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* 1. This is the menu in its HIDDEN state (now above the screen) */
+    .top-nav nav {
+        position: fixed;
+        z-index: 999;
+        padding-top: 40px;
+        padding-bottom: 40px; 
+
+        /* CHANGED: Positioned from the top-left */
+        top: 0;
+        left: 0;
+        
+        /* CHANGED: Dimensions are now a full-width bar */
+        width: 100%;
+        height: auto;
+        
+        background-color: #1a1a1aac;
+        
+        /* The KEY CHANGE: Hides the menu above the screen */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        
+        /* Layout for the links inside */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center links horizontally */
+        justify-content: center;
+    }
+
+    /* 2. This is the menu in its VISIBLE state */
+    .top-nav nav.nav-open {
+        /* The KEY CHANGE: Slides the menu down into view */
+        transform: translateY(0);
+    }
+    
+    /* 3. Style the links for the dropdown layout */
+    .top-nav nav a {
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0; /* Add vertical padding */
+    }
+}
