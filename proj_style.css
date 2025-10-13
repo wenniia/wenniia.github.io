@@ -157,18 +157,17 @@ figcaption {
     text-align: right;
 }
 
-/* Basic Button Styling */
+/* back to portfolio */
 .btn {
     display: inline-block; /* Allows us to set padding and other block-level properties */
     padding: 12px 24px;   /* Vertical and horizontal padding */
     margin-top: 10px;
     margin-bottom: 20px;         /* Adds some space around the button */
     margin-right: 50px;
-    background-color: #eb8686d3; /* A dark gray background */
+    background-color: #eb8686d3; 
     color: white;         /* White text color */
     text-decoration: none;/* Removes the default underline from the link */
     border-radius: 5px;   /* Rounds the corners */
-    font-family: sans-serif; /* A clean, modern font */
     font-weight: bold;
     border: 2px solid #ccb0b0; /* Adds a subtle border */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
@@ -184,6 +183,68 @@ figcaption {
 /* Active Effect: Styles for when the button is being clicked */
 .btn:active {
     transform: scale(0.98); /* Makes the button slightly smaller on click */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+
+    height: 10vh; 
+}
+
+.play-btn {
+    /* Colors & Font */
+    background-color: #ac85e0; /* Dusty rose background */
+    color: #ffffff;             /* White text */
+    font-size: 1.5rem;           /* Adjust size as needed */
+    font-weight: bold;           /* Bold text */
+    text-decoration: none;       /* Removes the underline from the link */
+
+    /* Spacing & Shape */
+    padding: 10px 50px;       /* Top/bottom and left/right padding */
+    border-radius: 10px;      /* Creates the rounded corners */
+    border: 3px solid #e0d9fd; /* The lighter border around the button */
+
+    /* Interactivity */
+    cursor: pointer;          /* Shows a hand cursor on hover */
+    transition: transform 0.2s ease; /* Smooth animation for the hover effect */
+}
+
+.play-btn:hover {
+    transform: translateY(-3px); /* Lifts the button slightly on hover */
+    background-color: #c1a6fa;
+}
+
+.play-btn:active {
+    transform: scale(0.98);
+}
+
+.link-btn {
+    /* Colors & Font */
+    background-color: #eb8686d3; 
+    color: #ffffff;             /* White text */
+    font-size: 1.1rem;           /* Adjust size as needed */
+    font-weight: bold;           /* Bold text */
+    text-decoration: none;       /* Removes the underline from the link */
+
+    /* Spacing & Shape */
+    padding: 10px 30px;       /* Top/bottom and left/right padding */
+    border-radius: 10px;      /* Creates the rounded corners */
+    border: 3px solid #ccb0b0; /* The lighter border around the button */
+
+    /* Interactivity */
+    cursor: pointer;          /* Shows a hand cursor on hover */
+    transition: transform 0.2s ease; /* Smooth animation for the hover effect */
+}
+
+.link-btn:hover {
+    background-color: #da8e8e; /* Slightly lighter background on hover */
+    cursor: pointer;        /* Changes the cursor to a pointer */
+}
+
+.link-btn:active {
+    transform: scale(0.98);
 }
 
 .video-wrapper {
@@ -266,7 +327,7 @@ figcaption {
         display: block;
     }
 
-    /* 1. This is the menu in its HIDDEN state (now above the screen) */
+    /* This is the menu in its HIDDEN state (now above the screen) */
     .top-nav nav {
         position: fixed;
         z-index: 999;
@@ -294,13 +355,13 @@ figcaption {
         justify-content: center;
     }
 
-    /* 2. This is the menu in its VISIBLE state */
+    /* This is the menu in its VISIBLE state */
     .top-nav nav.nav-open {
         /* The KEY CHANGE: Slides the menu down into view */
         transform: translateY(0);
     }
     
-    /* 3. Style the links for the dropdown layout */
+    /* Style the links for the dropdown layout */
     .top-nav nav a {
         font-size: 1.5em;
         width: 100%;
