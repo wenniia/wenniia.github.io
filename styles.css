@@ -58,7 +58,9 @@ body {
     z-index: 2;
     color: white;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
-
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bio-text {
@@ -68,6 +70,7 @@ body {
     padding: 30px;
     border-radius: 30px;
 }
+
 #canvas-container {
     padding: 40px 20px;
     text-align: center;
