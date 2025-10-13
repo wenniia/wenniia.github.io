@@ -113,6 +113,14 @@ body {
 }
 
 .project-details p {
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
     padding: 10px;
     font-size: 1em;
     line-height: 1.7;
@@ -120,7 +128,13 @@ body {
 }
 
 .project-details h3 {
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .project-details img {
@@ -327,7 +341,7 @@ figcaption {
         display: block;
     }
 
-    /* This is the menu in its HIDDEN state (now above the screen) */
+    /* 1. This is the menu in its HIDDEN state (now above the screen) */
     .top-nav nav {
         position: fixed;
         z-index: 999;
@@ -355,13 +369,13 @@ figcaption {
         justify-content: center;
     }
 
-    /* This is the menu in its VISIBLE state */
+    /* 2. This is the menu in its VISIBLE state */
     .top-nav nav.nav-open {
         /* The KEY CHANGE: Slides the menu down into view */
         transform: translateY(0);
     }
     
-    /* Style the links for the dropdown layout */
+    /* 3. Style the links for the dropdown layout */
     .top-nav nav a {
         font-size: 1.5em;
         width: 100%;
